@@ -1,0 +1,4 @@
+- Utilizamos as pastas "www" na área de trabalho
+- localhost/ ou 127.0.0.1 (localização do pc para ele mesmo)
+- O servidor web, no caso, no laboratório, é o próprio computador
+- Nosso navegador. Por exemplo, o Chrome usa o motor V8 para interpretar o Javascript

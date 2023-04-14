@@ -1,0 +1,52 @@
+@media(max-width:1000px) {
+    #mainLista {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px;
+        gap: 1%;
+
+    }
+
+    .card {
+        width: 95%;
+        height: 95%;
+        margin: auto;
+    }
+
+}
+
+@media(max-width:800px) {
+    #mainLista {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+
+    }
+
+    .card {
+        width: 95%;
+        height: 95%;
+    }
+
+}
+
+@media(max-width:600px) {
+    #mainLista {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 150px 150px 150px;
+    }
+
+    #mainChips figure img {
+        width: 100%;
+    }
+}
+
+@media(max-width:1261px) {
+    .titulo-logo {
+        width: 92%;
+    }
+
+    header {
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+    }
+}

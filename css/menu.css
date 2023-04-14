@@ -1,0 +1,160 @@
+/* Menus */
+#menu {
+    width: 30%;
+    height: 100%;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+#menu ul li {
+    font-size: 1.7rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: calc(100%/2);
+
+}
+
+#menu ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#menu ul li:hover {
+    background-color: var(--secondary);
+}
+
+#menu ul li:hover a {
+    text-decoration: underline;
+}
+
+/*Menu responsivo*/
+input#checkmenu {
+    display: none;
+
+}
+
+#labelmenu {
+    width: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+}
+
+.menuburguer {
+    margin-right: 3%;
+    height: 100%;
+}
+
+/*para a navegação não encostar no título*/
+@media(max-width:1542px) {
+    #menu ul li {
+        font-size: 1.3em;
+    }
+}
+
+
+@media(max-width:1261px) {
+
+    /*menu vai desaparecer*/
+    #menu {
+        display: none;
+        height: calc(100vh - 7rem);
+        width: 100%;
+        justify-content: right;
+
+    }
+
+    #menu ul {
+        flex-wrap: wrap;
+        background-color: var(--third);
+        height: 100%;
+        width: 50%;
+        align-content: flex-start;
+
+    }
+
+    /*Esconderemos a ul*/
+    input#checkmenu~#menu ul {
+        position: absolute;
+        right: -100%;
+        animation: appear;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        transition: right 3s;
+
+    }
+
+    /*para que a ul, escondida à direita, apareça*/
+    @keyframes appear {
+        100% {
+            right: 0;
+        }
+    }
+
+
+    #menu ul li {
+        width: 100%;
+        text-align: right;
+        display: block;
+        padding: 2% 0;
+        height: calc(7rem/2);
+    }
+
+    .menuburguer {
+        display: flex;
+        width: 70%;
+        height: 30px;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+
+    /*Animação*/
+    /*Quando apertarmos o label, o menu vai aparecer*/
+    input#checkmenu:checked~#menu {
+        display: flex;
+        backdrop-filter: blur(5px);
+    }
+
+    /*para que rode quando clicar*/
+    input#checkmenu:checked~label .menuburguer {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        rotate: 45deg;
+    }
+
+    input#checkmenu:checked~label #hamburguer1::before {
+        position: absolute;
+        rotate: -90deg;
+    }
+
+
+    .hamburguer,
+    .hamburguer::before {
+        display: block;
+        height: 5%;
+        background-color: #000;
+        width: 100%;
+        transition: rotate 1s;
+
+    }
+
+    .hamburguer::before {
+        display: block;
+        content: '';
+    }
+
+
+
+
+
+}

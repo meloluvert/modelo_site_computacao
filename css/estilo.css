@@ -1,0 +1,138 @@
+/*Tags gerais*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --primary: #FF9800;
+    --secondary: #4CAF50;
+    --secondary-light: #90c691;
+    --third: #37474F;
+    --third-light: #c0c6c9;
+    --black: #000;
+    --white: #FFF;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7rem;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    border-bottom: 3px var(--third) solid;
+    border-top: 8px var(--third) solid;
+}
+
+main {
+    padding-top: 7rem;
+    min-height: calc(100vh - 3rem);
+    background-color: var(--second);
+
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+
+h1,
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.3rem;
+    text-align: justify;
+    display: block;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+main figure {
+    width: 50%;
+
+}
+
+main figure img {
+    width: 80%;
+}
+
+figure:nth-child(1) {
+    text-align: right;
+}
+
+figure:nth-child(2) {
+    text-align: left;
+}
+
+footer {
+    background-color: var(--third);
+    height: 3rem;
+    display: flex;
+    justify-content: left;
+}
+
+/* Títulos, do site e dos articles */
+
+
+.titulo-logo {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.titulo-logo img {
+    float: left;
+    margin: 5%;
+    width: 5rem;
+}
+
+#mainChips {
+    justify-content: center;
+}
+
+#mainLista {
+    justify-content: space-around;
+
+
+}
+
+.card {
+    width: 23%;
+    background-color: var(--third-light);
+    border-radius: 5%;
+    padding: 1%;
+}
+
+/* Redes socias no footer */
+footer a {
+    display: block;
+    height: 70%;
+    margin: auto 0.5%;
+
+}
+
+footer a img {
+    width: 100%;
+    height: 100%;
+}
